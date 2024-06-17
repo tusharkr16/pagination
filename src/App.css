@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+/* Pagination.css */
+
+.pagination-container {
+    margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.data-table th, .data-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.data-table th {
+    background-color: green;
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.data-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination li a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.pagination li a:hover {
+    background-color: #f1f1f1;
 }
