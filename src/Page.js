@@ -10,6 +10,7 @@ const Page = ({ currentPage, totalPages, onPageChange }) => {
         cursor: "pointer"
     };
     const handlePrevious = () => {
+
         if (currentPage > 1) {
             onPageChange(currentPage - 1);
         }
@@ -25,7 +26,7 @@ const Page = ({ currentPage, totalPages, onPageChange }) => {
         <div style={{ display: 'flex', gap: "20px" }}>
             <button style={buttonStyle} onClick={() => handlePrevious()} disabled={currentPage === 1}>Previous</button>
             <button style={buttonStyle}>{currentPage}</button>
-            <button style={buttonStyle} onClick={() => handleNext()}>Next</button>
+            <button style={buttonStyle} onClick={() => handleNext()} disabled={currentPage === totalPages}>Next</button>
         </div>
     )
 }
